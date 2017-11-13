@@ -20,6 +20,10 @@ fn main() {
     #[derive(Debug)]
     struct Structure(i32);
     println!("This struct `{:?}` won't print...", Structure(3));
+    
+    let pi = 3.14159265358979323;
+    println!("Pi is about {:0.3}", pi);
+    
 }
 
 fn introduce(a: &str, b: &str) -> () {
