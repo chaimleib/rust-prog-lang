@@ -13,8 +13,8 @@ fn parse_str_num() {
 fn floats() {
     let x = 2.0; // f64
     let y: f32 = 3.0;
-    
+
     println!("x = {}, y = {}", x, y);
-    println!("x/6. = {}, y/6. = {}", x/6., y/6.);
+    println!("x/6. = {:.02}, y/6. = {:.02}", x/6., y/6.);
 }
 
