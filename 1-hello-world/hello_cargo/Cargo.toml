@@ -2,5 +2,6 @@
 name = "hello_cargo"
 version = "0.1.0"
 authors = ["Chaim-Leib Halbert <chaim.leib.halbert@gmail.com>"]
+edition = "2021"
 
 [dependencies]
