@@ -3,6 +3,7 @@ fn main() {
     move_string();
     clone_string();
     arg_pass();
+    pass_it_around();
 }
 
 fn label(s: &str) {
@@ -46,4 +47,18 @@ fn takes_ownership(s: String) {
 
 fn makes_copy(i: i32) {
     println!("{}", i);
+}
+
+fn gives_ownership() -> String {
+    let some_string = String::from("yours");
+    some_string
+}
+
+fn gives_and_takes_back(a_string: String) -> String {
+    a_string
+}
+
+fn pass_it_around() {
+    label("pass_it_around");
+    takes_ownership(gives_and_takes_back(gives_ownership()));
 }
