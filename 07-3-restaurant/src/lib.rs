@@ -22,6 +22,9 @@ pub fn order_breakfast() {
     let mut meal = back_of_house::Breakfast::summer("Rye");
     meal.toast = String::from("Wheat");
     println!("I'd like {} toast please", meal.toast);
+
+    // won't compile: private field
+    // meal.seasonal_fruit = String::from("blueberries");
 }
 
 fn deliver_order() {}
