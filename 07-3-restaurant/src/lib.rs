@@ -18,11 +18,23 @@ pub fn eat_at_restaurant() {
     front_of_house::hosting::add_to_waitlist();
 }
 
+fn deliver_order() {}
+
+mod back_of_house {
+    pub fn fix_incorrect_order() {
+        cook_order();
+        super::deliver_order();
+    }
+
+    fn cook_order() {}
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
     #[test]
     fn it_works() {
         eat_at_restaurant();
+        back_of_house::fix_incorrect_order();
     }
 }
