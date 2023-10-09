@@ -25,6 +25,7 @@ pub fn order_breakfast() {
 
     // won't compile: private field
     // meal.seasonal_fruit = String::from("blueberries");
+    println!("The fruit this season is {}", meal.fruit());
 }
 
 fn deliver_order() {}
@@ -49,6 +50,10 @@ mod back_of_house {
                 seasonal_fruit: String::from("peaches"),
             }
         }
+
+        pub fn fruit(self) -> String {
+            String::from(self.seasonal_fruit)
+        }
     }
 
     pub enum Appetizer {
@@ -58,8 +63,8 @@ mod back_of_house {
 }
 
 pub fn order_appetizer() {
-    let order1 = back_of_house::Appetizer::Soup;
-    let order2 = back_of_house::Appetizer::Salad;
+    let _order1 = back_of_house::Appetizer::Soup;
+    let _order2 = back_of_house::Appetizer::Salad;
 }
 
 #[cfg(test)]
